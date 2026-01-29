@@ -1,0 +1,11 @@
+/* assets/css/variables.css */
+:root {
+  --primary-color: #0078D4;
+  --secondary-color: #2B3A42;
+  --accent-color: #00BCF2;
+  --success-color: #107C10;
+  --warning-color: #F3F2F1;
+  --card-bg: #FFFFF;
+  --text-primary: #323130;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
