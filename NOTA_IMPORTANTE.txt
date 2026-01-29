@@ -1,0 +1,56 @@
+El primer dia de creado este proyecto, tuve un error de:
+ci: add Azure Static Web Apps workflow file (Build & Deploy)
+Comentarios de Gemini al respecto:
+El error es muy claro: ERROR in app Module not found: Error: Can't resolve './js/app.js' in '/github/workspace'
+
+¿Qué pasó?
+
+Azure detectó un archivo package.json en tu proyecto (que venía con la plantilla "HTML5 Boilerplate").
+
+Al verlo, Azure dijo: "¡Ah! Esto es un proyecto complejo de Node.js, voy a intentar compilarlo".
+
+Ejecutó el comando de construcción (npm run build -> webpack).
+
+El problema: La configuración por defecto de esa plantilla espera que las carpetas css, js e img estén en la raíz.
+
+La causa: Como nosotros (muy acertadamente) movimos todo dentro de una carpeta assets para ser más ordenados, el sistema de construcción automático se perdió y dio error.
+
+ESTA ES LA FORMA EN LA QUE PROCEDÍ:
+La Solución "TechStore" (Rápida y Limpia)
+Dado que nuestro objetivo es entregar una web estática (HTML + CSS) y no necesitamos compilar nada complejo todavía, la solución más profesional es eliminar la "burocracia" que no usamos. Vamos a decirle a Azure que deje de intentar "construir" el sitio y simplemente lo publique tal cual está.
+
+Para hacer esto, vamos a eliminar los archivos de configuración de Webpack que están causando el conflicto. No los necesitas para la Tarea del Instituto.
+
+Pasos a realizar en IntelliJ:
+
+En la vista de Project (izquierda), selecciona y ELIMINA (Delete) los siguientes archivos que están en la raíz (son archivos de configuración de compilación que ahora mismo estorban):
+
+package.json
+
+package-lock.json
+
+webpack.common.js
+
+webpack.config.dev.js
+
+webpack.config.prod.js
+
+.babelrc (si existe)
+
+Sube el cambio a GitHub: Abre la terminal de IntelliJ y ejecuta:
+
+git add .
+git commit -m "fix: remove unused webpack build config to fix azure deployment"
+git push
+
+
+
+***********************************************************************************
+¿Qué pasará después?
+Azure detectará el nuevo push.
+
+Verá que ya no hay package.json.
+
+Dirá: "Vale, esto es solo HTML puro. No necesito compilar nada, solo copiar los archivos".
+
+El despliegue se pondrá en verde (Success).
