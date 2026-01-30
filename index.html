@@ -1,33 +1,57 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="es">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>TechStore Enterprise - Admin Console</title>
   <link rel="stylesheet" href="assets/css/style.css">
-  <meta name="description" content="">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
-
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
-
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+  <meta name="description" content="Consola de administración para TechStore Enterprise">
 </head>
 
 <body>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="assets/js/app.js"></script>
+<div class="app-container">
+  <nav class="sidebar">
+    <div class="sidebar__brand">
+      <h2>TechStore <span class="text-accent">Pro</span></h2>
+    </div>
 
+    <ul class="sidebar__menu">
+      <li><a href="index.html" class="sidebar__link active">Dashboard</a></li>
+      <li><a href="dashboard.html" class="sidebar__link">Inventario</a></li>
+      <li><a href="gestion.html" class="sidebar__link">Nuevo Producto</a></li>
+      <li><a href="#" class="sidebar__link">Configuración</a></li>
+    </ul>
+
+    <div class="sidebar__footer">
+      <p>v1.0.0 (Mockup)</p>
+    </div>
+  </nav>
+
+  <div class="main-content">
+
+    <header class="topbar">
+      <div class="topbar__title">
+        <h1>Panel de Control</h1>
+      </div>
+      <div class="topbar__user">
+        <span>Admin: <strong>César Galvez</strong></span>
+        <div class="user-avatar">CG</div> <!--Esto pone mis iniciales a falta de una foto-->
+      </div>
+    </header>
+
+    <main class="page-content">
+      <section class="welcome-section">
+        <h2>Bienvenido al Sistema ERP</h2>
+        <p>Selecciona una opción del menú para comenzar a gestionar TechStore.</p>
+      </section>
+    </main>
+
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
 </body>
 
 </html>

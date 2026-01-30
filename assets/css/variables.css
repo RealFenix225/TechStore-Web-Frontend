@@ -1,11 +1,21 @@
-/* assets/css/variables.css */
+/* Definición de Identidad Corporativa - TechStore Enterprise */
 :root {
-  --primary-color: #0078D4;
-  --secondary-color: #2B3A42;
-  --accent-color: #00BCF2;
-  --success-color: #107C10;
-  --warning-color: #F3F2F1;
-  --card-bg: #FFFFF;
-  --text-primary: #323130;
+  /* Colores Principales */
+  --primary-color: #0078D4;       /* Azul Azure/Corporativo */
+  --secondary-color: #2B3A42;     /* Gris Oscuro Intenso */
+  --accent-color: #00BCF2;        /* Cian brillante para detalles */
+
+  /* Colores de Estado */
+  --success-color: #107C10;       /* Verde Éxito */
+  --warning-color: #FFB900;       /* Amarillo Alerta */
+  --danger-color: #D13438;        /* Rojo Error/Stock Bajo */
+
+  /* Colores Base */
+  --bg-color: #F3F2F1;            /* Gris muy claro de fondo */
+  --card-bg: #FFFFFF;             /* Fondo de tarjetas */
+  --text-primary: #323130;        /* Texto principal */
+  --text-secondary: #605E5C;      /* Texto secundario */
+
+  /* Tipografía */
   --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
