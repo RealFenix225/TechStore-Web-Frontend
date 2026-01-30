@@ -41,11 +41,53 @@
       </div>
     </header>
 
+    <!--Esta sección del --main class-- es de integración multimedia
+     Crea una sección "Widgets" en el Dashboard index.html que contiene
+     Video (simulación de TechStore)
+     Audio/Podcast (Reproductor de noticias tech).-->
     <main class="page-content">
-      <section class="welcome-section">
-        <h2>Bienvenido al Sistema ERP</h2>
-        <p>Selecciona una opción del menú para comenzar a gestionar TechStore.</p>
+
+      <div class="welcome-banner">
+        <h2>Bienvenido, César Galvez</h2>
+        <p>Resumen de actividad de TechStore Enterprise.</p>
+      </div>
+
+      <section class="dashboard-grid">
+
+        <article class="card">
+          <div class="card__header">
+            <h3>Novedades TechStore (v1.0)</h3>
+          </div>
+          <div class="card__body">
+            <video class="media-player" controls poster="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg">
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+              Tu navegador no soporta la etiqueta de video.
+            </video>
+            <p class="text-small">Tutorial de introducción al nuevo panel administrativo.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h3>🎧 Podcast Semanal</h3>
+          </div>
+          <div class="card__body">
+            <p>Episodio 4: Ciberseguridad en Bases de Datos Oracle.</p>
+            <audio class="media-player" controls>
+              <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+              Tu navegador no soporta el elemento de audio.
+            </audio>
+          </div>
+        </article>
+
+        <article class="card kpi-card">
+          <h3>Total Productos</h3>
+          <p class="kpi-number">1,240</p>
+          <span class="status-badge success">+15% este mes</span>
+        </article>
+
       </section>
+
     </main>
 
   </div>

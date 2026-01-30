@@ -117,3 +117,93 @@ ul { list-style: none; padding: 0; margin: 0; }
   margin: 0 auto;
   width: 100%;
 }
+
+/* Esta sección lo agregué después de modificar el --<main class="page-content">--
+en index.html (30/01).
+Esto hace que las tarjetas se vean profesionales (sombras, bordes, redondeados y distribución).*/
+
+/* --- DASHBOARD WIDGETS --- */
+
+.welcome-banner {
+  margin-bottom: 2rem;
+}
+
+.welcome-banner h2 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Grid para las tarjetas */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo automático */
+  gap: 1.5rem;
+}
+
+/* Diseño de Tarjeta (Card) */
+.card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow: hidden; /* Para que nada se salga de los bordes redondos */
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px); /* Pequeña elevación al pasar el mouse */
+}
+
+.card__header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--bg-color);
+  background-color: #fafafa;
+}
+
+.card__header h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+
+.card__body {
+  padding: 1.5rem;
+}
+
+/* Multimedia Responsive */
+.media-player {
+  width: 100%; /* El video/audio ocupa todo el ancho de la tarjeta */
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.text-small {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+
+/* KPI Card (Estilo extra) */
+.kpi-card .card__body {
+  text-align: center;
+}
+
+.kpi-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin: 1rem 0;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status-badge.success {
+  background-color: #e6ffec;
+  color: var(--success-color);
+}
