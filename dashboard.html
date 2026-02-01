@@ -1,10 +1,124 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inventario - TechStore Enterprise</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
+<div class="app-container">
+  <nav class="sidebar">
+    <div class="sidebar__brand">
+      <h2>TechStore <span class="text-accent">Pro</span></h2>
+    </div>
+
+    <ul class="sidebar__menu">
+      <li><a href="index.html" class="sidebar__link">📊 Dashboard</a></li>
+      <li><a href="dashboard.html" class="sidebar__link active">📦 Inventario</a></li>
+      <li><a href="gestion.html" class="sidebar__link">➕ Nuevo Producto</a></li>
+      <li><a href="#" class="sidebar__link">⚙️ Configuración</a></li>
+    </ul>
+
+    <div class="sidebar__footer">
+      <p>v1.0.0 (Mockup)</p>
+    </div>
+  </nav>
+
+  <div class="main-content">
+
+    <header class="topbar">
+      <div class="topbar__title">
+        <h1>Gestión de Inventario</h1>
+      </div>
+      <div class="topbar__user">
+        <span>Admin: <strong>César Galvez</strong></span>
+        <div class="user-avatar">CG</div>
+      </div>
+    </header>
+
+    <main class="page-content">
+
+      <div class="actions-bar">
+        <div class="search-box">
+          <input type="text" placeholder="Buscar producto por SKU o nombre..." class="form-control">
+        </div>
+        <a href="gestion.html" class="btn btn-primary">➕ Nuevo Producto</a>
+      </div>
+
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+          <tr>
+            <th>ID</th>
+            <th>Producto</th>
+            <th>Categoría</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>#1001</td>
+            <td><strong>Laptop HP Pavilion 15"</strong><br><span class="text-muted">AMD Ryzen 5, 8GB RAM</span></td>
+            <td>Portátiles</td>
+            <td>€650.00</td>
+            <td>12</td>
+            <td><span class="badge badge-success">En Stock</span></td>
+            <td>
+              <button class="btn-icon">✏️</button>
+              <button class="btn-icon delete">🗑️</button>
+            </td>
+          </tr>
+          <tr>
+            <td>#1002</td>
+            <td><strong>Mouse Logitech MX Master</strong><br><span class="text-muted">Ergonómico, Inalámbrico</span></td>
+            <td>Periféricos</td>
+            <td>€99.90</td>
+            <td>45</td>
+            <td><span class="badge badge-success">En Stock</span></td>
+            <td>
+              <button class="btn-icon">✏️</button>
+              <button class="btn-icon delete">🗑️</button>
+            </td>
+          </tr>
+          <tr>
+            <td>#1003</td>
+            <td><strong>Monitor Samsung 24"</strong><br><span class="text-muted">FHD, 75Hz, IPS</span></td>
+            <td>Monitores</td>
+            <td>€129.50</td>
+            <td>2</td>
+            <td><span class="badge badge-warning">Bajo Stock</span></td>
+            <td>
+              <button class="btn-icon">✏️</button>
+              <button class="btn-icon delete">🗑️</button>
+            </td>
+          </tr>
+          <tr>
+            <td>#1004</td>
+            <td><strong>Teclado Mecánico RGB</strong><br><span class="text-muted">Switch Blue, Español</span></td>
+            <td>Periféricos</td>
+            <td>€45.00</td>
+            <td>0</td>
+            <td><span class="badge badge-danger">Agotado</span></td>
+            <td>
+              <button class="btn-icon">✏️</button>
+              <button class="btn-icon delete">🗑️</button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+
+  </div>
+</div>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
