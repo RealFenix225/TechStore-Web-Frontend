@@ -1,10 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-oj" lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nuevo Producto - TechStore Enterprise</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
+<div class="app-container">
+  <nav class="sidebar">
+    <div class="sidebar__brand">
+      <h2>TechStore <span class="text-accent">Pro</span></h2>
+    </div>
+
+    <ul class="sidebar__menu">
+      <li><a href="index.html" class="sidebar__link">📊 Dashboard</a></li>
+      <li><a href="dashboard.html" class="sidebar__link">📦 Inventario</a></li>
+      <li><a href="gestion.html" class="sidebar__link active">➕ Nuevo Producto</a></li>
+      <li><a href="#" class="sidebar__link">⚙️ Configuración</a></li>
+    </ul>
+
+    <div class="sidebar__footer">
+      <p>v1.0.0 (Mockup)</p>
+    </div>
+  </nav>
+
+  <div class="main-content">
+
+    <header class="topbar">
+      <div class="topbar__title">
+        <h1>Alta de Producto</h1>
+      </div>
+      <div class="topbar__user">
+        <span>Admin: <strong>César Galvez</strong></span>
+        <div class="user-avatar">CG</div>
+      </div>
+    </header>
+
+    <main class="page-content">
+
+      <div class="form-container">
+        <div class="form-header">
+          <h2>Registrar nuevo ítem</h2>
+          <p>Completa la información técnica para añadir algo al catálogo</p>
+        </div>
+
+        <form action="#" class="product-form">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre">Nombre del Producto *</label>
+              <input type="text" id="nombre" name="nombre" placeholder="EJ: Laptop Dell XPS 13" required>
+            </div>
+            <div class="form-group">
+              <label for="sku">Código SKU *</label>
+              <input type="text" id="sku" name="sku" placeholder="Ej: Dell-XPSS-2026" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="categoria">Categoría</label>
+              <select id="categoria" name="categoria">
+                <option value="portatiles">Portátiles</option>
+                <option value="perifericos">Periféricos</option>
+                <option value="monitores">Monitores</option>
+                <option value="componentes">Componentes</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="precio">Precio unitario (€) *</label>
+              <input type="number" id="precio" name="precio" step="0.01" placeholder="0.00" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="stock"> Stock Inicial</label>
+            <input type="number" id="stock" name="stock" value="1" min="0">
+          </div>
+
+          <div class="form-group">
+            <label for="descripcion">Descripcion Técnica</label>
+            <textarea id="descripcion" name="descripcion" rows="4" placeholder="Detalles del procesador, RAM, garantía..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="descripcion">Descrición Técnica</label>
+            <textarea id="descripcion" name="descripcion" rows="4" placeholder="Detalles del procesador, RAM, garantía..."></textarea>
+          </div>
+
+          <div class="form-actions">
+            <a href="dashboard.html" class="btn btn-secondary">Cancelar</a>
+            <button type="submit" class="btn btn-primary">Guardar Producto</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+  </div>
+</div>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
