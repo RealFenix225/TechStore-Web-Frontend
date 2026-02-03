@@ -399,3 +399,70 @@ Esto hace que las tarjetas se vean profesionales (sombras, bordes, redondeados y
   display: flex;
   justify-content: flex-end;
 }
+/* Media Query implementado el 03/02 */
+/*Diseño para dispositivos móviles */
+/*Esto mueve la barra lateral de la izquierda hacia arriba cuando se ingresa desde el movil */
+/* Esta regla se activa solo si la pantalla mide menos de 768px (Tablets y Móviles) */
+
+@media (max-width: 768px) {
+
+  /*1. Cambiar el Grid: De lado a lado -> Arriba y Abajo */
+  .app-container {
+    grid-template-columns: 1fr; /*Una sola columna (ancho completo) */
+    grid-template-rows: auto 1fr; /*Menú arriba (auto), Contenido abajo */
+    height: auto; /*Altura automática (scroll infinito)*/
+    overflow: visible;
+  }
+
+  /*2. Esto transforma el sidebar en una barra superior */
+  .sidebar {
+    padding: 1rem;
+    border-right: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /*Esto ocualta lo innecesario en móviles para ahorrar espacio*/
+  .sidebar__brand,
+  .sidebar__footer {
+    display: none;
+  }
+
+  /*3. Esto convierte el menú vertical en horizontal */
+  .sidebar__menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .sidebar__link {
+    margin-bottom: 0;
+    font-size: 0.9rem; /*Para que la letra parezca más pequeña */
+    padding: 8px 12px;
+    text-align: center;
+  }
+
+  /*4. Ajustes del contenido principal*/
+  .main-content {
+    height: auto; /*Esto quita el bloqueo de altura */
+    overflow: visible;
+  }
+
+  .topbar {
+    padding: 0 1rem; /*Esto disminuye el relleno de los lados */
+  }
+
+  .topbar__title h1 {
+    font-size: 1rem; /*Título más pequeño */
+  }
+
+  .page-content {
+    padding: 1rem; /*Esto reduce el margen en el contenido*/
+  }
+
+  /*5. Esto fuerza que las tarjetas y formularios sean de 1 columna */
+  .dashboard-grid,
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
